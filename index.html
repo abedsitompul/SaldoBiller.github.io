@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="" />
+  <title>Saldo Biller</title>
+
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="design/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bodyImage">
+    <img src="image/index.png" alt="">
+    
+  </div>
+
+  </div>
+  <div class="container">
+    <div class="col-12 text-center BigTittle">Saldo Biller</div>
+    <div id="confirm">
+      <div id="exampleModal" class="message">
+        <h2>Data Tidak Boleh Kosong</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4 voucher">
+        <p class="title">Voucher</p>
+        <!-- IRS -->
+        <div>
+          <label for="first" class="text-left">IRS</label>
+          <input type="text" class="form-control mt-2" name="IRS" placeholder="IRS" id="txtSaldoIrs" required />
+        </div>
+        <!--  Pulsa-114 -->
+        <div>
+          <label for="first" class="text-left">Pulsa-114</label>
+          <input type="text" class="form-control mt-2" name="Pulsa-114" placeholder="Pulsa-114" id="txtSaldoP114"
+            required />
+        </div>
+        <!-- Plus Link -->
+        <div>
+          <label for="first" class="text-left">Plus Link</label>
+          <input type="text" class="form-control mt-2" name="Plus Link" placeholder="Plus Link" id="txtSaldoPL"
+            required />
+        </div>
+        <!-- E-Money -->
+        <div>
+          <label for="first" class="text-left">E-Money</label>
+          <input type="text" class="form-control mt-2" name="E-Money" placeholder="E-Money" id="txtSaldoEM" required />
+        </div>
+      </div>
+
+      <!-- FIRST SLIDE 2 -->
+      <div class="col-4" id="ExVoucher">
+        <p class="title" id="JudulExVoucher">Ex Voucher</p>
+        <!-- Bimasakti -->
+        <div>
+          <label for="first" class="text-left">Bimasakti</label>
+          <input type="text" class="form-control mt-2" name="Bimasakti" placeholder="Bimasakti" id="txtSaldoBima"
+            required />
+        </div>
+        <!-- Teleanjar -->
+        <div>
+          <label for="first" class="text-left">Teleanjar</label>
+          <input type="text" class="form-control mt-2" name="Teleanjar" placeholder="Teleanjar" id="txtSaldoTeleanjar"
+            required />
+        </div>
+        <!-- DELIMA -->
+        <div>
+          <label for="first" class="text-left">Delima</label>
+          <input type="text" class="form-control mt-2" name="Delima" placeholder="Delima" id="txtSaldoDelima"
+            required />
+        </div>
+        <!-- DJI - FIF -->
+        <div>
+          <label for="first" class="text-left">Dji - FIF</label>
+          <input type="text" class="form-control mt-2" name="DJI - FIF" placeholder="DJI - FIF" id="txtSaldoDJI"
+            required />
+        </div>
+        <!-- Big Flip - Transfer Uang -->
+        <div>
+          <label for="first" class="text-left">Big Flip - Transfer Uang</label>
+          <input type="text" class="form-control mt-2" name="Big Flip - Transfer Uang"
+            placeholder="Big Flip - Transfer Uang" id="txtSaldoBigFlip" required />
+        </div>
+        <!--  Pluslink - MF -->
+        <div>
+          <label for="first" class="text-left">Pluslink - MF</label>
+          <input type="text" class="form-control mt-2" name="Pluslink - MF" placeholder="Pluslink - MF"
+            id="txtSaldoPluslinkMF" required />
+        </div>
+
+        <!--Mitracom -->
+        <div>
+          <label for="first" class="text-left">Mitracom</label>
+          <input type="text" class="form-control mt-2" name="Mitracom" placeholder="Mitracom" id="txtSaldoMitracom"
+            required />
+        </div>
+        <!-- GSP -->
+        <div>
+          <label for="first" class="text-left">GSP</label>
+          <input type="text" class="form-control mt-2" name="GSP" placeholder="GSP" id="txtSaldoGSP" required />
+        </div>
+        <!-- PT POS -->
+        <div>
+          <label for="first" class="text-left">PT POS</label>
+          <input type="text" class="form-control mt-2" name="PT POS" placeholder="PT POS" id="txtSaldoPTPOS" required />
+        </div>
+      </div>
+      <!-- FIRST SLIDE 2 -->
+
+      <!-- END COL 6 SLIDE 2 -->
+      <div class="col-12 text-center btnsubmit">
+        <button type="submit" class="btn" value="Lanjutkan" onclick="saveFile()">
+          Submit
+        </button>
+      </div>
+    </div>
+    <!-- END  row-->
+  </div>
+
+  <footer>
+    Copyright : Helpdesk
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

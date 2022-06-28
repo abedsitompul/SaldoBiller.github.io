@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+:root {
+  /* FONT JUDUL */
+  --UkFont: 24px;
+  --font-Dongle: Dongle;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+}
+
+
+.bodyImage {
+  position: absolute;
+  bottom: 50px;
+  right: 2px;
+}
+
+.bodyImage img {
+  width: 70%;
+}
+
+
+
+.BigTittle {
+  padding-top: 1rem;
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+}
+
+.title {
+  font-family: "Asap", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container .row label {
+  font-family: "Asap", sans-serif;
+  text-align: left;
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+.container .col-6 div {
+  width: 100%;
+}
+
+.container .col-6 div label {
+  margin-top: 2px;
+}
+
+input[type="text"] {
+  width: 250px;
+  display: block;
+  height: 28px;
+  font-size: var(--UkFont);
+  font-family: var(--font-Dongle);
+  padding-top: 10px;
+}
+
+label {
+  font-size: var(--UkFont);
+  font-family: var(--font-Dongle);
+}
+
+.btnsubmit .btn {
+  background-color: rgb(163, 163, 163);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: auto;
+  font-weight: bold;
+}
+
+.btnsubmit .btn:hover {
+  background-color: rgb(87, 87, 87);
+  transform: scale(1.05);
+}
+
+#confirm {
+  right: 0;
+  margin-left: 40%;
+  margin-right: 40%;
+  top: calc(110% - 50%);
+  position: absolute;
+  display: none;
+}
+
+#confirm:target {
+  visibility: visible;
+  display: block;
+}
+
+.message {
+  position: relative;
+  background: #ff0000;
+  font-size: 20px;
+  font-family: var(--font-Dongle);
+  font-weight: bold;
+  padding-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  z-index: 41;
+  color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(254, 21, 21, 0.4);
+}
+footer {
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  bottom: -90px;
+  font-size: 12px;
+
+}
