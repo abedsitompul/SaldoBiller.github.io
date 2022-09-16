@@ -1,6 +1,6 @@
 // Start Perbanding
 var WaktuBanding = new Date().getHours();
-let wbpagi = 8;
+let wbpagi = 9;
 let wbsiang = 18;
 let pesan;
 
@@ -23,7 +23,7 @@ if (WaktuBanding < wbpagi) {
 const rupiah = document.querySelectorAll(".form-control");
 
 for (let i = 0; i < rupiah.length; i++) {
-  rupiah[i].addEventListener("keyup", function(e) {
+  rupiah[i].addEventListener("keyup", function (e) {
     rupiah[i].value = formatRupiah(this.value, "Rp. ");
   });
 }
@@ -65,7 +65,7 @@ let saveFile = () => {
   const txtSaldoMitracom = document.getElementById("txtSaldoMitracom");
   const txtSaldoGSP = document.getElementById("txtSaldoGSP");
   const txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS");
-
+  const txtArtaJasa = document.getElementById("txtArtaJasa");
 
   var today = new Date();
   var tglnya = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
@@ -116,6 +116,9 @@ let saveFile = () => {
     "Saldo PT POS - PDAM :\n" +
     txtSaldoPTPOS.value +
     "\n\n" +
+    "Saldo Artajasa - PGN :\n" +
+    txtArtaJasa.value +
+    "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
   // Convert the text to BLOB.
@@ -144,6 +147,7 @@ let saveFile = () => {
     document.getElementById("txtSaldoMitracom").value = "";
     document.getElementById("txtSaldoGSP").value = "";
     document.getElementById("txtSaldoPTPOS").value = "";
+    document.getElementById("txtArtaJasa").value = "";
   } else {
     newLink.href = window.URL.createObjectURL(textToBLOB);
     newLink.style.display = "none";
