@@ -152,6 +152,7 @@ let saveFile = () => {
     document.getElementById("txtSaldoGSP").value = "";
     document.getElementById("txtSaldoPTPOS").value = "";
     document.getElementById("txtArtaJasa").value = "";
+    document.getElementById("txtArindo").value = "";
   } else {
     newLink.href = window.URL.createObjectURL(textToBLOB);
     newLink.style.display = "none";
