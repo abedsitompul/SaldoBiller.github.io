@@ -66,7 +66,8 @@ let saveFile = () => {
   const txtSaldoGSP = document.getElementById("txtSaldoGSP");
   const txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS");
   const txtArtaJasa = document.getElementById("txtArtaJasa");
-
+  const txtArindo = document.getElementById("txtarindo");
+  
   var today = new Date();
   var tglnya = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
@@ -118,6 +119,9 @@ let saveFile = () => {
     "\n\n" +
     "Saldo Artajasa - PGN :\n" +
     txtArtaJasa.value +
+    "\n\n" +
+    "Saldo Arindo - PDAM :\n" +
+    txtArindo.value +
     "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
