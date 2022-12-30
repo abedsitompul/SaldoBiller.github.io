@@ -1,7 +1,7 @@
 // Start Perbanding
 var WaktuBanding = new Date().getHours();
 let wbpagi = 9;
-let wbsiang = 18;
+let wbsiang = 17;
 let pesan;
 
 // perbandingan
@@ -17,7 +17,6 @@ if (WaktuBanding < wbpagi) {
   document.getElementsByClassName("voucher")[0].style.visibility = "show";
   pesan = "Malam";
 }
-
 // End Perbandingan
 
 const rupiah = document.querySelectorAll(".form-control");
@@ -29,7 +28,6 @@ for (let i = 0; i < rupiah.length; i++) {
 }
 
 function formatRupiah(angka, prefix) {
-  // var number_string = angka.replace(/[^,\d]/g, "").toString(),
   var number_string = angka.replace(/[^,\d,]/g, "").toString(),
     split = number_string.split("."),
     sisa = split[0].length % 3,
@@ -59,15 +57,13 @@ let saveFile = () => {
   const txtSaldoDelima = document.getElementById("txtSaldoDelima");
   const txtSaldoDJI = document.getElementById("txtSaldoDJI");
   const txtSaldoBigFlip = document.getElementById("txtSaldoBigFlip");
-  const txtSaldoPluslinkMF =
-    document.getElementById("txtSaldoPluslinkMF");
-
+  const txtSaldoPluslinkMF = document.getElementById("txtSaldoPluslinkMF");
   const txtSaldoMitracom = document.getElementById("txtSaldoMitracom");
   const txtSaldoGSP = document.getElementById("txtSaldoGSP");
   const txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS");
   const txtArtaJasa = document.getElementById("txtArtaJasa");
-  const txtArindo = document.getElementById("txtarindo");
-  
+  const txtArindo = document.getElementById("txtArindo");
+
   var today = new Date();
   var tglnya = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
