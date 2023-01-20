@@ -91,28 +91,28 @@ let saveFile = () => {
     "*"+"Saldo DELIMA - BPJS-Kes & PayTV :"+"*"+"\n" +
     txtSaldoDelima.value +
     "\n\n" +
-    "Saldo DJI - FIF :\n" +
+    "*"+"Saldo DJI - FIF :"+"*"+"\n" +
     txtSaldoDJI.value +
     "\n\n" +
-    "Saldo Big Flip - Transfer Uang :\n" +
+    "*"+"Saldo Big Flip - Transfer Uang :"+"*"+"\n" +
     txtSaldoBigFlip.value +
     "\n\n" +
-    "Saldo Pluslink - MF :\n" +
+    "*"+"Saldo Pluslink - MF :"+"*"+"\n" +
     txtSaldoPluslinkMF.value +
     "\n\n" +
-    "Saldo Mitracom - PBB :\n" +
+    "*"+"Saldo Mitracom - PBB :"+"*"+"\n" +
     txtSaldoMitracom.value +
     "\n\n" +
-    "Saldo GSP :\n" +
+    "*"+"Saldo GSP :"+"*"+"\n" +
     txtSaldoGSP.value +
     "\n\n" +
-    "Saldo PT POS - PDAM :\n" +
+    "*"+"Saldo PT POS - PDAM :"+"*"+"\n" +
     txtSaldoPTPOS.value +
     "\n\n" +
-    "Saldo Artajasa - PGN :\n" +
+    "*"+"Saldo Artajasa - PGN :"+"*"+"\n" +
     txtArtaJasa.value +
     "\n\n" +
-    "Saldo Arindo - PDAM :\n" +
+    "*"+"Saldo Arindo - PDAM :"+"*"+"\n" +
     txtArindo.value +
     "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
