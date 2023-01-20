@@ -69,30 +69,26 @@ let saveFile = () => {
 
   // This variable stores all the data.
   let data =
-    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " +
-    pesan +
-    " ini Per Tgl " +
-    tglnya +
-    "\n \n" +
-    "Saldo IRS - Voucher :\n" +
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tglnya + "\n \n" +
+    "*"+"Saldo IRS - Voucher :"+"*"+"\n" +
     txtSaldoIrs.value +
     "\n\n" +
-    "Saldo Pulsa-114 - Voucher :\n" +
+    "*"+"Saldo Pulsa-114 - Voucher :"+"*"+"\n" +
     txtSaldoP114.value +
     "\n\n" +
-    "Saldo Plus Link - Voucher :\n" +
+    "*"+"Saldo Plus Link - Voucher :"+"*"+"\n" +
     txtSaldoPL.value +
     "\n\n" +
-    "Saldo E-Money - Voucher :\n" +
+    "*"+"Saldo E-Money - Voucher :"+"*"+"\n" +
     txtSaldoEM.value +
     "\n\n" +
-    "Saldo Bimasakti - PDAM  :\n" +
+    "*"+"Saldo Bimasakti - PDAM  :"+"*"+"\n" +
     txtSaldoBima.value +
     "\n\n" +
-    "Saldo Teleanjar - PDAM:\n" +
+    "*"+"Saldo Teleanjar - PDAM :"+"*"+"\n" +
     txtSaldoTeleanjar.value +
     "\n\n" +
-    "Saldo DELIMA - BPJS-Kes & PayTV :\n" +
+    "*"+"Saldo DELIMA - BPJS-Kes & PayTV :"+"*"+"\n" +
     txtSaldoDelima.value +
     "\n\n" +
     "Saldo DJI - FIF :\n" +
