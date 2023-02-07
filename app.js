@@ -50,6 +50,7 @@ let saveFile = () => {
   const txtSaldoP114 = document.getElementById("txtSaldoP114");
   const txtSaldoPL = document.getElementById("txtSaldoPL");
   const txtSaldoEM = document.getElementById("txtSaldoEM");
+  const txtSaldoDn = document.getElementById("txtSaldoDn");
 
   //   Ex Voucher
   const txtSaldoBima = document.getElementById("txtSaldoBima");
@@ -81,6 +82,9 @@ let saveFile = () => {
     "\n\n" +
     "*"+"Saldo E-Money - Voucher :"+"*"+"\n" +
     txtSaldoEM.value +
+    "\n\n" +
+    "*"+"Saldo Dana - Voucher :"+"*"+"\n" +
+    txtSaldoDn.value +
     "\n\n" +
     "*"+"Saldo Bimasakti - PDAM  :"+"*"+"\n" +
     txtSaldoBima.value +
@@ -133,6 +137,7 @@ let saveFile = () => {
     document.getElementById("txtSaldoP114").value = "";
     document.getElementById("txtSaldoPL").value = "";
     document.getElementById("txtSaldoEM").value = "";
+    document.getElementById("txtSaldoDn").value = "";
 
     document.getElementById("txtSaldoBima").value = "";
     document.getElementById("txtSaldoTeleanjar").value = "";
