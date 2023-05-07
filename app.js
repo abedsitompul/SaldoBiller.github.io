@@ -4,6 +4,7 @@ const txtSaldoP114 = document.getElementById("txtSaldoP114");
 const txtSaldoPL = document.getElementById("txtSaldoPL");
 const txtSaldoEM = document.getElementById("txtSaldoEM");
 const txtSaldoDn = document.getElementById("txtSaldoDn");
+const txtEazy = document.getElementById("txtEazy");
 
 //   Ex Voucher
 const txtSaldoBima = document.getElementById("txtSaldoBima");
@@ -84,6 +85,9 @@ function underPagi() {
   "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
   txtSaldoDn.value +
   "\n\n" +
+  "*" + "Saldo Eazyload - Voucher :" + "*" + "\n" +
+  txtEazy.value +
+  "\n\n" +
   "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
   txtSaldoBima.value +
   "\n\n" +
@@ -136,6 +140,7 @@ function underPagi() {
     document.getElementById("txtSaldoPL").value = "";
     document.getElementById("txtSaldoEM").value = "";
     document.getElementById("txtSaldoDn").value = "";
+    document.getElementById("txtEazy").value = "";
 
     document.getElementById("txtSaldoBima").value = "";
     document.getElementById("txtSaldoTeleanjar").value = "";
