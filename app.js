@@ -18,6 +18,7 @@ const txtSaldoGSP = document.getElementById("txtSaldoGSP");
 const txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS");
 const txtArtaJasa = document.getElementById("txtArtaJasa");
 const txtArindo = document.getElementById("txtArindo");
+const txtLinkQU = document.getElementById("txtLinkQU");
 
 
 var WaktuBanding = new Date().getHours();
@@ -121,6 +122,9 @@ function underPagi() {
   "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
   txtArindo.value +
   "\n\n" +
+  "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
+  txtLinkQU.value +
+  "\n\n" +
   "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
    // Convert the text to BLOB.
@@ -153,6 +157,7 @@ function underPagi() {
     document.getElementById("txtSaldoPTPOS").value = "";
     document.getElementById("txtArtaJasa").value = "";
     document.getElementById("txtArindo").value = "";
+    document.getElementById("txtLinkQU").value = "";
   } else {
     newLink.href = window.URL.createObjectURL(textToBLOB);
     newLink.style.display = "none";
@@ -201,6 +206,9 @@ function underSiang() {
   "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
   txtArindo.value +
   "\n\n" +
+  "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
+  txtLinkQU.value +
+  "\n\n" +
   "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
    // Convert the text to BLOB.
@@ -226,6 +234,7 @@ function underSiang() {
     document.getElementById("txtSaldoPTPOS").value = "";
     document.getElementById("txtArtaJasa").value = "";
     document.getElementById("txtArindo").value = "";
+    document.getElementById("txtLinkQU").value = "";
   } else {
     newLink.href = window.URL.createObjectURL(textToBLOB);
     newLink.style.display = "none";
