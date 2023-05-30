@@ -206,7 +206,7 @@ function underSiang() {
   "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
   txtArindo.value +
   "\n\n" +
-  "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
+  "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
   txtLinkQU.value +
   "\n\n" +
   "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
