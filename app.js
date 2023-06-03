@@ -22,8 +22,8 @@ const txtLinkQU = document.getElementById("txtLinkQU");
 
 
 var WaktuBanding = new Date().getHours();
-// var eleVoucher = document.getElementById("voucher");
-var eleVoucher = document.querySelectorAll(".voucher")
+var eleVoucher = document.getElementById("voucher");
+// var eleVoucher = document.querySelectorAll(".voucher")
 let wbpagi = 9;
 let wbsiang = 17;
 let pesan;
