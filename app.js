@@ -1,43 +1,53 @@
-//   VOucher
-const txtSaldoIrs = document.getElementById("txtSaldoIrs");
-const txtSaldoP114 = document.getElementById("txtSaldoP114");
-const txtSaldoPL = document.getElementById("txtSaldoPL");
-const txtSaldoEM = document.getElementById("txtSaldoEM");
-const txtSaldoDn = document.getElementById("txtSaldoDn");
-const txtEazy = document.getElementById("txtEazy");
+class Produk_PagidanMalam {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn, txtEazy) {
+    this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
+    this.txtSaldoP114 = document.getElementById("txtSaldoP114")
+    this.txtSaldoPL = document.getElementById("txtSaldoPL")
+    this.txtSaldoEM = document.getElementById("txtSaldoEM")
+    this.txtSaldoDn = document.getElementById("txtSaldoDn")
+    this.txtEazy = document.getElementById("txtEazy")
+  };
+}
 
-//   Ex Voucher
-const txtSaldoBima = document.getElementById("txtSaldoBima");
-const txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar");
-const txtSaldoDelima = document.getElementById("txtSaldoDelima");
-const txtSaldoDJI = document.getElementById("txtSaldoDJI");
-const txtSaldoBigFlip = document.getElementById("txtSaldoBigFlip");
-const txtSaldoPluslinkMF = document.getElementById("txtSaldoPluslinkMF");
-const txtSaldoMitracom = document.getElementById("txtSaldoMitracom");
-const txtSaldoGSP = document.getElementById("txtSaldoGSP");
-const txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS");
-const txtArtaJasa = document.getElementById("txtArtaJasa");
-const txtArindo = document.getElementById("txtArindo");
-const txtLinkQU = document.getElementById("txtLinkQU");
-
+class Produk_Siang {
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasa, txtArindo, txtLinkQU) {
+    this.txtSaldoBima = document.getElementById("txtSaldoBima")
+    this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
+    this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
+    this.txtSaldoDJI = document.getElementById("txtSaldoDJI")
+    this.txtSaldoBigFlip = document.getElementById("txtSaldoBigFlip")
+    this.txtSaldoPluslinkMF = document.getElementById("txtSaldoPluslinkMF")
+    this.txtSaldoMitracom = document.getElementById("txtSaldoMitracom")
+    this.txtSaldoGSP = document.getElementById("txtSaldoGSP")
+    this.txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS")
+    this.txtArtaJasa = document.getElementById("txtArtaJasa")
+    this.txtArindo = document.getElementById("txtArindo")
+    this.txtLinkQU = document.getElementById("txtLinkQU")
+  };
+} 
 
 var WaktuBanding = new Date().getHours();
-var eleVoucher = document.getElementById("voucher");
-// var eleVoucher = document.querySelectorAll(".voucher")
+const eleVoucher = document.querySelectorAll(".voucher");
 let wbpagi = 9;
 let wbsiang = 17;
 let pesan;
 
-// perbandingan
-if (WaktuBanding < wbpagi) { 
-  eleVoucher.style.display = "block";
-  pesan = "Pagi";
-} else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) { 
-  eleVoucher.style.display = "none";
-  pesan = "Siang";
+// perbandingan 
+if (WaktuBanding < wbpagi) {
+  for (var wb = 0; wb < eleVoucher.length; wb++) {
+    eleVoucher[wb].style.display = "block";
+    pesan = "Pagi";
+  }
+} else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
+  for (var wbp = 0; wbp < eleVoucher.length; wbp++) {
+    eleVoucher[wbp].style.display = "none";
+    pesan = "Siang";
+  }
 } else {
-  eleVoucher.style.display = "block";
-  pesan = "Malam";
+  for (var wbM = 0; wbM < eleVoucher.length; wbM++) {
+    eleVoucher[wbM].style.display = "block";
+    pesan = "Malam";
+  }
 }
 // End Perbandingan
 
@@ -65,70 +75,146 @@ function formatRupiah(angka, prefix) {
   return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
 }
 
+// untuk Pagi
 function underPagi() {
-
+  const UnderPagi = new Produk_PagidanMalam();
+  const UnderSiang = new Produk_Siang();
   var today = new Date();
-  var tglnya = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
   data =
-  "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tglnya + "\n \n" +
-  "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
-  txtSaldoIrs.value +
-  "\n\n" +
-  "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
-  txtSaldoP114.value +
-  "\n\n" +
-  "*" + "Saldo Plus Link - Voucher :" + "*" + "\n" +
-  txtSaldoPL.value +
-  "\n\n" +
-  "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
-  txtSaldoEM.value +
-  "\n\n" +
-  "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
-  txtSaldoDn.value +
-  "\n\n" +
-  "*" + "Saldo Eazyload - Voucher :" + "*" + "\n" +
-  txtEazy.value +
-  "\n\n" +
-  "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
-  txtSaldoBima.value +
-  "\n\n" +
-  "*" + "Saldo Teleanjar - PDAM :" + "*" + "\n" +
-  txtSaldoTeleanjar.value +
-  "\n\n" +
-  "*" + "Saldo DELIMA - BPJS-Kes & PayTV :" + "*" + "\n" +
-  txtSaldoDelima.value +
-  "\n\n" +
-  "*" + "Saldo DJI - FIF :" + "*" + "\n" +
-  txtSaldoDJI.value +
-  "\n\n" +
-  "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
-  txtSaldoBigFlip.value +
-  "\n\n" +
-  "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
-  txtSaldoPluslinkMF.value +
-  "\n\n" +
-  "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
-  txtSaldoMitracom.value +
-  "\n\n" +
-  "*" + "Saldo GSP :" + "*" + "\n" +
-  txtSaldoGSP.value +
-  "\n\n" +
-  "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
-  txtSaldoPTPOS.value +
-  "\n\n" +
-  "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
-  txtArtaJasa.value +
-  "\n\n" +
-  "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
-  txtArindo.value +
-  "\n\n" +
-  "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
-  txtLinkQU.value +
-  "\n\n" +
-  "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
+    "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoIrs.value +
+    "\n\n" +
+    "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoP114.value +
+    "\n\n" +
+    "*" + "Saldo Plus Link - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoPL.value +
+    "\n\n" +
+    "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoEM.value +
+    "\n\n" +
+    "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoDn.value +
+    "\n\n" +
+    "*" + "Saldo Eazyload - Voucher :" + "*" + "\n" +
+    UnderPagi.txtEazy.value +
+    "\n\n" +
+    "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
+    UnderSiang.txtSaldoBima.value +
+    "\n\n" +
+    "*" + "Saldo Teleanjar - PDAM :" + "*" + "\n" +
+    UnderSiang.txtSaldoTeleanjar.value +
+    "\n\n" +
+    "*" + "Saldo DELIMA - BPJS-Kes & PayTV :" + "*" + "\n" +
+    UnderSiang.txtSaldoDelima.value +
+    "\n\n" +
+    "*" + "Saldo DJI - FIF :" + "*" + "\n" +
+    UnderSiang.txtSaldoDJI.value +
+    "\n\n" +
+    "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
+    UnderSiang.txtSaldoBigFlip.value +
+    "\n\n" +
+    "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
+    UnderSiang.txtSaldoPluslinkMF.value +
+    "\n\n" +
+    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+    UnderSiang.txtSaldoMitracom.value +
+    "\n\n" +
+    "*" + "Saldo GSP :" + "*" + "\n" +
+    UnderSiang.txtSaldoGSP.value +
+    "\n\n" +
+    "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
+    UnderSiang.txtSaldoPTPOS.value +
+    "\n\n" +
+    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    UnderSiang.txtArtaJasa.value +
+    "\n\n" +
+    "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
+    UnderSiang.txtArindo.value +
+    "\n\n" +
+    "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
+    UnderSiang.txtLinkQU.value +
+    "\n\n" +
+    "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
-   // Convert the text to BLOB.
+  // Convert the text to BLOB.
+  const textToBLOB = new Blob([data], {
+    type: "text/plain",
+  });
+
+  var DateFile = new Date().getDate();
+  const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
+  let newLink = document.createElement("a");
+  newLink.download = NamaFile;
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtEazy", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasa", "txtArindo", "txtLinkQU"];
+  if (window.webkitURL != null) {
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
+    for (var y = 0; y < Array_underPagi.length; y++) {
+      document.getElementById(Array_underPagi[y]).value = "";
+    }
+  } else {
+    newLink.href = window.URL.createObjectURL(textToBLOB);
+    newLink.style.display = "none";
+    document.body.appendChild(newLink);
+  }
+  newLink.click();
+}
+
+// SIANG HARI
+function underSiang() {
+  const UnderPagi = new Produk_PagidanMalam();
+  const UnderSiang = new Produk_Siang();
+
+  var today = new Date();
+  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
+  data =
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
+    "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoDn.value +
+    "\n\n" +
+    "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
+    UnderSiang.txtSaldoBima.value +
+    "\n\n" +
+    "*" + "Saldo Teleanjar - PDAM :" + "*" + "\n" +
+    UnderSiang.txtSaldoTeleanjar.value +
+    "\n\n" +
+    "*" + "Saldo DELIMA - BPJS-Kes & PayTV :" + "*" + "\n" +
+    UnderSiang.txtSaldoDelima.value +
+    "\n\n" +
+    "*" + "Saldo DJI - FIF :" + "*" + "\n" +
+    UnderSiang.txtSaldoDJI.value +
+    "\n\n" +
+    "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
+    UnderSiang.txtSaldoBigFlip.value +
+    "\n\n" +
+    "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
+    UnderSiang.txtSaldoPluslinkMF.value +
+    "\n\n" +
+    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+    UnderSiang.txtSaldoMitracom.value +
+    "\n\n" +
+    "*" + "Saldo GSP :" + "*" + "\n" +
+    UnderSiang.txtSaldoGSP.value +
+    "\n\n" +
+    "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
+    UnderSiang.txtSaldoPTPOS.value +
+    "\n\n" +
+    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    UnderSiang.txtArtaJasa.value +
+    "\n\n" +
+    "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
+    UnderSiang.txtArindo.value +
+    "\n\n" +
+    "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
+    UnderSiang.txtLinkQU.value +
+    "\n\n" +
+    "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
+
+  // Convert the text to BLOB.
   const textToBLOB = new Blob([data], {
     type: "text/plain",
   });
@@ -140,107 +226,11 @@ function underPagi() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    document.getElementById("txtSaldoIrs").value = "";
-    document.getElementById("txtSaldoP114").value = "";
-    document.getElementById("txtSaldoPL").value = "";
-    document.getElementById("txtSaldoEM").value = "";
-    document.getElementById("txtSaldoDn").value = "";
-    document.getElementById("txtEazy").value = "";
+    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasa", "txtArindo", "txtLinkQU"];
+      for (var x = 0; x < Array_underSiang.length; x++) {
+      document.getElementById(Array_underSiang[x]).value = "";
+    }
 
-    document.getElementById("txtSaldoBima").value = "";
-    document.getElementById("txtSaldoTeleanjar").value = "";
-    document.getElementById("txtSaldoDelima").value = "";
-    document.getElementById("txtSaldoDJI").value = "";
-    document.getElementById("txtSaldoBigFlip").value = "";
-    document.getElementById("txtSaldoPluslinkMF").value = "";
-    document.getElementById("txtSaldoMitracom").value = "";
-    document.getElementById("txtSaldoGSP").value = "";
-    document.getElementById("txtSaldoPTPOS").value = "";
-    document.getElementById("txtArtaJasa").value = "";
-    document.getElementById("txtArindo").value = "";
-    document.getElementById("txtLinkQU").value = "";
-  } else {
-    newLink.href = window.URL.createObjectURL(textToBLOB);
-    newLink.style.display = "none";
-    document.body.appendChild(newLink);
-  }
-  newLink.click();
-}
-
-function underSiang() {
-
-  var today = new Date();
-  var tglnya = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
-
-  data =
-  "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tglnya + "\n \n" + 
-  "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
-  txtSaldoDn.value +
-  "\n\n" +
-  "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
-  txtSaldoBima.value +
-  "\n\n" +
-  "*" + "Saldo Teleanjar - PDAM :" + "*" + "\n" +
-  txtSaldoTeleanjar.value +
-  "\n\n" +
-  "*" + "Saldo DELIMA - BPJS-Kes & PayTV :" + "*" + "\n" +
-  txtSaldoDelima.value +
-  "\n\n" +
-  "*" + "Saldo DJI - FIF :" + "*" + "\n" +
-  txtSaldoDJI.value +
-  "\n\n" +
-  "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
-  txtSaldoBigFlip.value +
-  "\n\n" +
-  "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
-  txtSaldoPluslinkMF.value +
-  "\n\n" +
-  "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
-  txtSaldoMitracom.value +
-  "\n\n" +
-  "*" + "Saldo GSP :" + "*" + "\n" +
-  txtSaldoGSP.value +
-  "\n\n" +
-  "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
-  txtSaldoPTPOS.value +
-  "\n\n" +
-  "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
-  txtArtaJasa.value +
-  "\n\n" +
-  "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
-  txtArindo.value +
-  "\n\n" +
-  "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
-  txtLinkQU.value +
-  "\n\n" +
-  "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
-
-   // Convert the text to BLOB.
-  const textToBLOB = new Blob([data], {
-    type: "text/plain",
-  });
-
-  var DateFile = new Date().getDate();
-  const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
-  let newLink = document.createElement("a");
-  newLink.download = NamaFile;
-
-  if (window.webkitURL != null) {
-    newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
-    document.getElementById("txtSaldoDn").value = "";
-    document.getElementById("txtSaldoBima").value = "";
-    document.getElementById("txtSaldoBima").value = "";
-    document.getElementById("txtSaldoTeleanjar").value = "";
-    document.getElementById("txtSaldoDelima").value = "";
-    document.getElementById("txtSaldoDJI").value = "";
-    document.getElementById("txtSaldoBigFlip").value = "";
-    document.getElementById("txtSaldoPluslinkMF").value = "";
-    document.getElementById("txtSaldoMitracom").value = "";
-    document.getElementById("txtSaldoGSP").value = "";
-    document.getElementById("txtSaldoPTPOS").value = "";
-    document.getElementById("txtArtaJasa").value = "";
-    document.getElementById("txtArindo").value = "";
-    document.getElementById("txtLinkQU").value = "";
   } else {
     newLink.href = window.URL.createObjectURL(textToBLOB);
     newLink.style.display = "none";
@@ -251,12 +241,11 @@ function underSiang() {
 
 // fungsi btn savefile
 let saveFile = () => {
-  if (WaktuBanding < wbpagi) { 
+  if (WaktuBanding < wbpagi) {
     underPagi();
-  } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) { 
+  } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
     underSiang();
   } else {
     underPagi();
   }
-  
 };
