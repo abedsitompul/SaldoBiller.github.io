@@ -22,7 +22,8 @@ const txtLinkQU = document.getElementById("txtLinkQU");
 
 
 var WaktuBanding = new Date().getHours();
-var eleVoucher = document.getElementById("voucher");
+// var eleVoucher = document.getElementById("voucher");
+var eleVoucher = document.querySelectorAll(".voucher")
 let wbpagi = 9;
 let wbsiang = 17;
 let pesan;
@@ -173,6 +174,9 @@ function underSiang() {
 
   data =
   "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tglnya + "\n \n" + 
+  "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
+  txtSaldoDn.value +
+  "\n\n" +
   "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
   txtSaldoBima.value +
   "\n\n" +
@@ -223,6 +227,8 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
+    document.getElementById("txtSaldoDn").value = "";
+    document.getElementById("txtSaldoBima").value = "";
     document.getElementById("txtSaldoBima").value = "";
     document.getElementById("txtSaldoTeleanjar").value = "";
     document.getElementById("txtSaldoDelima").value = "";
