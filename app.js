@@ -14,7 +14,7 @@ class Produk_PagidanMalam {
 }
 
 class Produk_Siang {
-  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasa, txtArindo, txtLinkQU) {
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU) {
     this.txtSaldoBima = document.getElementById("txtSaldoBima")
     this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
     this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
@@ -24,7 +24,8 @@ class Produk_Siang {
     this.txtSaldoMitracom = document.getElementById("txtSaldoMitracom")
     this.txtSaldoGSP = document.getElementById("txtSaldoGSP")
     this.txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS")
-    this.txtArtaJasa = document.getElementById("txtArtaJasa")
+    this.txtArtaJasaMBA = document.getElementById("txtArtaJasaMBA")
+    this.txtArtaJasaVSI = document.getElementById("txtArtaJasaVSI")
     this.txtArindo = document.getElementById("txtArindo")
     this.txtLinkQU = document.getElementById("txtLinkQU")
   };
@@ -134,7 +135,10 @@ function underPagi() {
     UnderSiang.txtSaldoPTPOS.value +
     "\n\n" +
     "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
-    UnderSiang.txtArtaJasa.value +
+    UnderSiang.txtArtaJasaMBA.value +
+    "\n\n" +
+    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    UnderSiang.txtArtaJasaVSI.value +
     "\n\n" +
     "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
     UnderSiang.txtArindo.value +
@@ -153,7 +157,8 @@ function underPagi() {
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtEazy", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasa", "txtArindo", "txtLinkQU"];
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtEazy", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU"];
+
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
     for (var y = 0; y < Array_underPagi.length; y++) {
@@ -208,7 +213,10 @@ function underSiang() {
     UnderSiang.txtSaldoPTPOS.value +
     "\n\n" +
     "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
-    UnderSiang.txtArtaJasa.value +
+    UnderSiang.txtArtaJasaMBA.value +
+    "\n\n" +
+    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    UnderSiang.txtArtaJasaVSI.value +
     "\n\n" +
     "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
     UnderSiang.txtArindo.value +
@@ -243,6 +251,7 @@ function underSiang() {
   newLink.click();
 }
 
+// Fungsi hitungLegth / JASTEL
 function hitungLegth() {
   const InputNomor = document.getElementById("nomor").value;
   const R10 = InputNomor.replace(/^0+/, "");
