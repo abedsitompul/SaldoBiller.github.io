@@ -134,10 +134,10 @@ function underPagi() {
     "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
     UnderSiang.txtSaldoPTPOS.value +
     "\n\n" +
-    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    "*" + "Saldo Artajasa - MBA :" + "*" + "\n" +
     UnderSiang.txtArtaJasaMBA.value +
     "\n\n" +
-    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    "*" + "Saldo Artajasa - VSI :" + "*" + "\n" +
     UnderSiang.txtArtaJasaVSI.value +
     "\n\n" +
     "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
@@ -212,10 +212,10 @@ function underSiang() {
     "*" + "Saldo PT POS - PDAM :" + "*" + "\n" +
     UnderSiang.txtSaldoPTPOS.value +
     "\n\n" +
-    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    "*" + "Saldo Artajasa - MBA :" + "*" + "\n" +
     UnderSiang.txtArtaJasaMBA.value +
     "\n\n" +
-    "*" + "Saldo Artajasa - PGN :" + "*" + "\n" +
+    "*" + "Saldo Artajasa - VSI :" + "*" + "\n" +
     UnderSiang.txtArtaJasaVSI.value +
     "\n\n" +
     "*" + "Saldo Arindo - PDAM :" + "*" + "\n" +
