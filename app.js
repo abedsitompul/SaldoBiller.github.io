@@ -3,13 +3,12 @@ document.getElementById("EksekusiInput").onclick = function() { // Addrow berdas
 };
 
 class Produk_PagidanMalam {
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn, txtEazy) {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn) {
     this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
     this.txtSaldoP114 = document.getElementById("txtSaldoP114")
     this.txtSaldoPL = document.getElementById("txtSaldoPL")
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
-    this.txtSaldoDn = document.getElementById("txtSaldoDn")
-    this.txtEazy = document.getElementById("txtEazy")
+    this.txtSaldoDn = document.getElementById("txtSaldoDn") 
   };
 }
 
@@ -104,9 +103,6 @@ function underPagi() {
     "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
-    "*" + "Saldo Eazyload - Voucher :" + "*" + "\n" +
-    UnderPagi.txtEazy.value +
-    "\n\n" +
     "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
     UnderSiang.txtSaldoBima.value +
     "\n\n" +
@@ -157,7 +153,7 @@ function underPagi() {
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtEazy", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU"];
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU"];
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
