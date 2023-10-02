@@ -13,7 +13,7 @@ class Produk_PagidanMalam {
 }
 
 class Produk_Siang {
-  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU) {
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo) {
     this.txtSaldoBima = document.getElementById("txtSaldoBima")
     this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
     this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
@@ -27,6 +27,7 @@ class Produk_Siang {
     this.txtArtaJasaVSI = document.getElementById("txtArtaJasaVSI")
     this.txtArindo = document.getElementById("txtArindo")
     this.txtLinkQU = document.getElementById("txtLinkQU")
+    this.txtOvo = document.getElementById("txtOvo")
   };
 } 
 
@@ -142,18 +143,21 @@ function underPagi() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
+    "*" + "Saldo OVO :" + "*" + "\n" +
+    UnderSiang.txtOvo.value +
+    "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
   // Convert the text to BLOB.
   const textToBLOB = new Blob([data], {
     type: "text/plain",
   });
-
+ 
   var DateFile = new Date().getDate();
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU"];
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
@@ -220,6 +224,9 @@ function underSiang() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
+    "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
+    UnderSiang.txtOvo.value +
+    "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
   // Convert the text to BLOB.
@@ -234,7 +241,7 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU"];
+    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU","txtOvo"];
       for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
