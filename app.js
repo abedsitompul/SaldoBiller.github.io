@@ -224,7 +224,7 @@ function underSiang() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
-    "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
+    "*" + "Saldo Ovo :" + "*" + "\n" +
     UnderSiang.txtOvo.value +
     "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
@@ -255,19 +255,7 @@ function underSiang() {
 }
 
 
-function saveFile() {
-  if (WaktuBanding < wbpagi) {
-    underPagi();
-  } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
-    underSiang();
-  } else {
-    underPagi();
-  }
-};
-
-
-// fungsi btn savefile
-// let saveFile = () => {
+// function saveFile() {
 //   if (WaktuBanding < wbpagi) {
 //     underPagi();
 //   } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
@@ -276,3 +264,15 @@ function saveFile() {
 //     underPagi();
 //   }
 // };
+
+
+// fungsi btn savefile
+let saveFile = () => {
+  if (WaktuBanding < wbpagi) {
+    underPagi();
+  } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
+    underSiang();
+  } else {
+    underPagi();
+  }
+};
