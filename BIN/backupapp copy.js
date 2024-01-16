@@ -1,6 +1,6 @@
-// document.getElementById("EksekusiInput").onclick = function() { // Addrow berdasarkan angkat inputan
-//   hitungLegth();
-// };
+document.getElementById("EksekusiInput").onclick = function() { // Addrow berdasarkan angkat inputan
+  hitungLegth();
+};
 
 class Produk_PagidanMalam {
   constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn) {
@@ -241,7 +241,7 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"];
+    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU","txtOvo"];
       for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
@@ -253,6 +253,33 @@ function underSiang() {
   }
   newLink.click();
 }
+
+// Fungsi hitungLegth / JASTEL
+function hitungLegth() {
+  const InputNomor = document.getElementById("nomor").value;
+  const R10 = InputNomor.replace(/^0+/, "");
+
+  const q = R10;
+  let x = q.length;
+  switch (x) {
+
+    case x = 8:
+      document.getElementById("CopasDatap").innerHTML = "00000" + InputNomor;
+      break;
+    case x = 9:
+      document.getElementById("CopasDatap").innerHTML = "00" + InputNomor.substring(0, 2) + "00" + InputNomor.substring(2);
+      break;
+    case x = 10:
+      document.getElementById("CopasDatap").innerHTML = "0" + InputNomor.substring(0, 3) + "00" + InputNomor.substring(3);
+      break;
+    case x = 12:
+      document.getElementById("CopasDatap").innerHTML = "0" + InputNomor;
+      break;
+    default:
+      alert("Nomor salah");
+  }
+}
+
 
 // fungsi btn savefile
 let saveFile = () => {
