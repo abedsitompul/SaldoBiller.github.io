@@ -254,8 +254,8 @@ function underSiang() {
   newLink.click();
 }
 
-// fungsi btn savefile
-let saveFile = () => {
+
+function saveFile() {
   if (WaktuBanding < wbpagi) {
     underPagi();
   } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
@@ -264,3 +264,15 @@ let saveFile = () => {
     underPagi();
   }
 };
+
+
+// fungsi btn savefile
+// let saveFile = () => {
+//   if (WaktuBanding < wbpagi) {
+//     underPagi();
+//   } else if (WaktuBanding > wbpagi && WaktuBanding < wbsiang) {
+//     underSiang();
+//   } else {
+//     underPagi();
+//   }
+// };
