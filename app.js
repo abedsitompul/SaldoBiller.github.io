@@ -101,7 +101,7 @@ function underPagi() {
     "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoEM.value +
     "\n\n" +
-    "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
+    "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
     "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
@@ -143,7 +143,7 @@ function underPagi() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
-    "*" + "Saldo OVO :" + "*" + "\n" +
+    "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
     UnderSiang.txtOvo.value +
     "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
@@ -182,7 +182,7 @@ function underSiang() {
 
   data =
     "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
-    "*" + "Saldo Dana - Voucher :" + "*" + "\n" +
+    "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
     "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
@@ -224,7 +224,7 @@ function underSiang() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
-    "*" + "Saldo Ovo :" + "*" + "\n" +
+    "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
     UnderSiang.txtOvo.value +
     "\n\n" +
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
