@@ -25,12 +25,12 @@ body {
   font-family: "Asap", sans-serif;
   font-size: var(--Uk20px);
   text-align: center;
-  margin-bottom: var(--Uk10px);
+  margin-bottom: 2rem;
 }
 
 /* NAVBAR */
 nav {
-  background-color: #4494ff;
+  background-color: #004eb4;
   height: 40px;
   width: auto;
   box-shadow: 0px -1px var(--Uk14px) 0px rgba(0, 0, 0, 1)
@@ -59,37 +59,63 @@ nav ul li {
 }
 
 nav ul li a {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: var(--Uk14px);
   font-weight: bold;
   padding: 4px 16px;
   border-radius: 3px;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none;;
+} 
+/* input-SBiller */
+.input-SBiller {
+  position: relative;
+  margin-bottom: 26px;
 }
 
-a.active,
-a:hover {
-  background: rgb(49, 68, 160, 0.4);
-  transition: 0.2s;
+.input-SBiller label {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  font-size: var(--Size14px);
+  font-weight: bold;
+  color: #0000009f;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
 }
 
-.container {
-  width: 100%;
+.input-SBiller input {
+  border: 1px solid rgba(0, 0, 0, 0.363);
+  /* border-bottom: 2px solid #00000059; */
+  background: transparent;
+  width: 250px;
+  padding: 2px 0 2px 6px;
+  font-size: var(--Uk14px);
+  color: var(--warnaHitam);
+  font-weight: bolder;
 }
 
+.input-SBiller input:focus~label,
+.input-SBiller input:valid~label {
+  top: -20px;
+  font-size: var(--Uk12px);
+  color: #00000086;
+  font-weight: bolder;
+}
 
 .btnsubmit .btn {
-  background-color: rgb(163, 163, 163);
+  background-color: rgb(0, 9, 138);
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: auto;
   font-weight: bold;
+  color: white;
 }
 
 .btnsubmit .btn:hover {
-  background-color: rgb(87, 87, 87);
-  transform: scale(1.05);
+  background-color: rgb(2, 16, 207);
+  transform: scale(1.03);
+  color: white;
 }
 
 #confirm {
@@ -127,54 +153,13 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #4494ff;
-  color: black;
+  /* background-color: #4494ff; */
+  color: rgba(0, 0, 0, 0.479);
   text-align: center;
   font-weight: bolder;
   font-size: var(--Uk10px);
 }
 
-/* input-SBiller */
-.input-SBiller {
-  position: relative;
-  margin-bottom: 26px;
-}
-
-.input-SBiller label {
-  position: absolute;
-  top: 0px;
-  left: 8px;
-  font-size: var(--Size14px);
-  font-weight: bold;
-  color: #0000009f;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.input-SBiller input {
-  border: 0;
-  border-bottom: 2px solid #00000059;
-  background: transparent;
-  width: var(--int-100);
-  padding: 2px 0 2px 6px;
-  font-size: var(--Uk14px);
-  color: var(--warnaHitam);
-  font-weight: bolder;
-}
-
-.input-SBiller input:focus {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid var(--warnaHitam);
-}
-
-.input-SBiller input:focus~label,
-.input-SBiller input:valid~label {
-  top: -18px;
-  font-size: var(--Uk12px);
-  color: #00000086;
-  font-weight: bolder;
-}
 
 @media screen and (max-width: 950px) {
   nav ul li a {
