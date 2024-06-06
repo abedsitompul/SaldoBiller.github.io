@@ -3,12 +3,14 @@
 // };
 
 class Produk_PagidanMalam {
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn) {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn, txtSaldoKws) {
     this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
     this.txtSaldoP114 = document.getElementById("txtSaldoP114")
     this.txtSaldoPL = document.getElementById("txtSaldoPL")
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
-    this.txtSaldoDn = document.getElementById("txtSaldoDn") 
+    this.txtSaldoDn = document.getElementById("txtSaldoDn")
+    this.txtSaldoKws = document.getElementById("txtSaldoKws")
+     
   };
 }
 
@@ -98,6 +100,9 @@ function underPagi() {
     "*" + "Saldo Plus Link - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoPL.value +
     "\n\n" +
+    "*" + "Saldo Kuwais - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoKws.value +
+    "\n\n" +
     "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoEM.value +
     "\n\n" +
@@ -157,7 +162,7 @@ function underPagi() {
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL",  "txtSaldoKws", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
