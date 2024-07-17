@@ -89,7 +89,8 @@ function underPagi() {
   const UnderSiang = new Produk_Siang();
   var today = new Date();
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
-
+  txtSaldoIrs.value = "Rp. 256.318.270";
+  
   data =
     "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
     "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
