@@ -1,17 +1,11 @@
-// document.getElementById("EksekusiInput").onclick = function() { // Addrow berdasarkan angkat inputan
-//   hitungLegth();
-// };
-
 class Produk_PagidanMalam {
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI) {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI) {
     this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
-    this.txtSaldoP114 = document.getElementById("txtSaldoP114")
-    this.txtSaldoPL = document.getElementById("txtSaldoPL")
+    this.txtSaldoP114 = document.getElementById("txtSaldoP114") 
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
     this.txtSaldoDn = document.getElementById("txtSaldoDn")
     this.txtSaldoKws = document.getElementById("txtSaldoKws")
     this.txtSaldoMMI = document.getElementById("txtSaldoMMI")
-     
   };
 }
 
@@ -98,17 +92,13 @@ function underPagi() {
     "\n\n" +
     "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoP114.value +
-    "\n\n" +
-    "*" + "Saldo Plus Link - Voucher :" + "*" + "\n" +
-    UnderPagi.txtSaldoPL.value +
-    "\n\n" +
+    "\n\n" + 
     "*" + "Saldo Kuwais - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoKws.value +
     "\n\n" +
     "*" + "Saldo MMI - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoMMI.value +
-    "\n\n" +
-    // gfaewrgae
+    "\n\n" + 
     "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoEM.value +
     "\n\n" +
@@ -168,7 +158,7 @@ function underPagi() {
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL",  "txtSaldoKws", 
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoKws", 
     "txtSaldoMMI", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
 
   if (window.webkitURL != null) {
