@@ -1,15 +1,17 @@
-
+// document.getElementById("EksekusiInput").onclick = function() { // Addrow berdasarkan angkat inputan
+//   hitungLegth();
+// };
 
 class Produk_PagidanMalam {
-
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws) {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoPL, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI) {
     this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
     this.txtSaldoP114 = document.getElementById("txtSaldoP114")
+    this.txtSaldoPL = document.getElementById("txtSaldoPL")
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
     this.txtSaldoDn = document.getElementById("txtSaldoDn")
     this.txtSaldoKws = document.getElementById("txtSaldoKws")
     this.txtSaldoMMI = document.getElementById("txtSaldoMMI")
-
+     
   };
 }
 
@@ -30,7 +32,7 @@ class Produk_Siang {
     this.txtLinkQU = document.getElementById("txtLinkQU")
     this.txtOvo = document.getElementById("txtOvo")
   };
-}
+} 
 
 var WaktuBanding = new Date().getHours();
 const eleVoucher = document.querySelectorAll(".voucher");
@@ -96,12 +98,16 @@ function underPagi() {
     "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoP114.value +
     "\n\n" +
+    "*" + "Saldo Plus Link - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoPL.value +
+    "\n\n" +
     "*" + "Saldo Kuwais - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoKws.value +
     "\n\n" +
     "*" + "Saldo MMI - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoMMI.value +
     "\n\n" +
+    // gfaewrgae
     "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoEM.value +
     "\n\n" +
@@ -156,15 +162,16 @@ function underPagi() {
   const textToBLOB = new Blob([data], {
     type: "text/plain",
   });
-
+ 
   var DateFile = new Date().getDate();
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
+  const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoPL",  "txtSaldoKws", 
+    "txtSaldoMMI", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
 
-  const Array_underPagi = ["txtSaldoIrs", "txtSaldoP114", "txtSaldoKws", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"];
   if (window.webkitURL != null) {
-    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
     for (var y = 0; y < Array_underPagi.length; y++) {
       document.getElementById(Array_underPagi[y]).value = "";
     }
@@ -245,8 +252,8 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"];
-    for (var x = 0; x < Array_underSiang.length; x++) {
+    const Array_underSiang=["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"];
+      for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
 
@@ -257,7 +264,7 @@ function underSiang() {
   }
   newLink.click();
 }
-
+ 
 // fungsi btn savefile
 let saveFile = () => {
   if (WaktuBanding < wbpagi) {
