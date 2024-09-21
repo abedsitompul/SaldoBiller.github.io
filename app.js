@@ -1,11 +1,12 @@
 class Produk_PagidanMalam {
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI) {
+  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI, txtSaldoPPM) {
     this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
     this.txtSaldoP114 = document.getElementById("txtSaldoP114") 
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
     this.txtSaldoDn = document.getElementById("txtSaldoDn")
     this.txtSaldoKws = document.getElementById("txtSaldoKws")
     this.txtSaldoMMI = document.getElementById("txtSaldoMMI")
+    this.txtSaldoPPM  = document.getElementById("txtSaldoPPM")
   };
 }
 
@@ -99,6 +100,11 @@ function underPagi() {
     "*" + "Saldo MMI - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoMMI.value +
     "\n\n" + 
+
+    "*" + "Saldo PPM - Voucher :" + "*" + "\n" +
+    UnderPagi.txtSaldoPPM.value +
+    "\n\n" + 
+
     "*" + "Saldo E-Money - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoEM.value +
     "\n\n" +
@@ -159,7 +165,7 @@ function underPagi() {
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi=["txtSaldoIrs", "txtSaldoP114", "txtSaldoKws", 
-    "txtSaldoMMI", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
+    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI" , "txtArindo", "txtLinkQU","txtOvo"];
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB); 
