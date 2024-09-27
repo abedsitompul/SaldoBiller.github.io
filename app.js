@@ -186,11 +186,12 @@ function underSiang() {
   const UnderSiang = new Produk_Siang();
 
   var today = new Date();
+  let pushTime = today.getHours() + ":" + today.getMinutes();
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
   data =
-    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
-    "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
+  "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + " Pukul : " + pushTime + "\n \n" +
+  "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
     "*" + "Saldo Bimasakti - PDAM  :" + "*" + "\n" +
