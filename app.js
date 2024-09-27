@@ -78,16 +78,21 @@ function formatRupiah(angka, prefix) {
   return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
 }
 
+
+function CallTimePush(a, b) {
+  return a + ":" +  b;
+}
+var today = new Date();
+
 // untuk Pagi
 function underPagi() {
   const UnderPagi = new Produk_PagidanMalam();
-  const UnderSiang = new Produk_Siang();
-  var today = new Date();
+  const UnderSiang = new Produk_Siang(); 
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   txtSaldoIrs.value = "Rp. 256.318.270";
   
   data =
-    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + "\n \n" +
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(today.getHours(),today.getMinutes())  + "\n \n" +
     "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoIrs.value +
     "\n\n" +
@@ -183,14 +188,11 @@ function underPagi() {
 // SIANG HARI
 function underSiang() {
   const UnderPagi = new Produk_PagidanMalam();
-  const UnderSiang = new Produk_Siang();
-
-  var today = new Date();
-  let pushTime = today.getHours() + ":" + today.getMinutes();
+  const UnderSiang = new Produk_Siang();  
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
   data =
-  "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + " Pukul : " + pushTime + "\n \n" +
+  "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(today.getHours(),today.getMinutes())  + "\n \n" +
   "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
