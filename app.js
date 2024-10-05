@@ -90,6 +90,7 @@ function underPagi() {
   const UnderSiang = new Produk_Siang(); 
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   txtSaldoIrs.value = "Rp. 256.318.270";
+  txtSaldoP114.value = "Rp. 1.127.884";
   
   data =
     "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(today.getHours(),today.getMinutes())  + "\n \n" +
