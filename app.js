@@ -97,8 +97,7 @@ function CallTimePush(h,m) {
 function underPagi() {
   const UnderPagi = new Produk_PagidanMalam();
   const UnderSiang = new Produk_Siang();
-  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
-  txtSaldoIrs.value = "Rp. 256.318.270";
+  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear(); 
   txtSaldoP114.value = "Rp. 1.127.884";
 
   data =
@@ -106,12 +105,15 @@ function underPagi() {
     "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoIrs.value +
     "\n\n" +
+
     "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoP114.value +
     "\n\n" +
+
     "*" + "Saldo Kuwais - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoKws.value +
     "\n\n" +
+    
     "*" + "Saldo MMI - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoMMI.value +
     "\n\n" +
