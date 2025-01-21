@@ -1,6 +1,5 @@
 class Produk_PagidanMalam {
-  constructor(txtSaldoIrs, txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI, txtSaldoPPM) {
-    this.txtSaldoIrs = document.getElementById("txtSaldoIrs")
+  constructor(txtSaldoP114, txtSaldoEM, txtSaldoDn, txtSaldoKws, txtSaldoMMI, txtSaldoPPM) {
     this.txtSaldoP114 = document.getElementById("txtSaldoP114")
     this.txtSaldoEM = document.getElementById("txtSaldoEM")
     this.txtSaldoDn = document.getElementById("txtSaldoDn")
@@ -102,9 +101,6 @@ function underPagi() {
 
   data =
     "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " +  CallTimePush(h,m) + "\n \n" +
-    "*" + "Saldo IRS - Voucher :" + "*" + "\n" +
-    UnderPagi.txtSaldoIrs.value +
-    "\n\n" +
 
     "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoP114.value +
@@ -181,7 +177,7 @@ function underPagi() {
   const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
-  const Array_underPagi = ["txtSaldoIrs", "txtSaldoP114", "txtSaldoKws",
+  const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
     "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"
   ];
 
