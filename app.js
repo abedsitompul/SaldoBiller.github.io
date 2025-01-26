@@ -10,7 +10,7 @@ class Produk_PagidanMalam {
 }
 
 class Produk_Siang {
-  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo) {
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo, txtTokpedGopay) {
     this.txtSaldoBima = document.getElementById("txtSaldoBima")
     this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
     this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
@@ -25,6 +25,7 @@ class Produk_Siang {
     this.txtArindo = document.getElementById("txtArindo")
     this.txtLinkQU = document.getElementById("txtLinkQU")
     this.txtOvo = document.getElementById("txtOvo")
+    this.txtTokpedGopay = document.getElementById("txtTokpedGopay")
   };
 }
 
@@ -88,19 +89,19 @@ var today = new Date();
 let h = addZero(today.getHours());
 let m = addZero(today.getMinutes());
 
-function CallTimePush(h,m) {
-  return h + ":" + m;    
-} 
+function CallTimePush(h, m) {
+  return h + ":" + m;
+}
 
 // untuk Pagi
 function underPagi() {
   const UnderPagi = new Produk_PagidanMalam();
   const UnderSiang = new Produk_Siang();
-  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear(); 
+  var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
   txtSaldoP114.value = "Rp. 1.127.884";
 
   data =
-    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " +  CallTimePush(h,m) + "\n \n" +
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(h, m) + "\n \n" +
 
     "*" + "Saldo Pulsa-114 - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoP114.value +
@@ -109,7 +110,7 @@ function underPagi() {
     "*" + "Saldo Kuwais - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoKws.value +
     "\n\n" +
-    
+
     "*" + "Saldo MMI - Voucher :" + "*" + "\n" +
     UnderPagi.txtSaldoMMI.value +
     "\n\n" +
@@ -163,9 +164,16 @@ function underPagi() {
     "*" + "Saldo LinkQU - Transfer Uang :" + "*" + "\n" +
     UnderSiang.txtLinkQU.value +
     "\n\n" +
+
     "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
     UnderSiang.txtOvo.value +
     "\n\n" +
+
+    "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
+    UnderSiang.txtTokpedGopay.value +
+    "\n\n" +
+
+
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
   // Convert the text to BLOB.
@@ -178,7 +186,7 @@ function underPagi() {
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
-    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"
+    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ];
 
   if (window.webkitURL != null) {
@@ -201,7 +209,7 @@ function underSiang() {
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
   data =
-    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(h,m) + "\n \n" +
+    "Assalamu'alaikum Warahmatullahi Wabarakatuh\nUpdate Info Saldo " + pesan + " ini Per Tgl " + tanggal + ", Pukul : " + CallTimePush(h, m) + "\n \n" +
     "*" + "Saldo Ewallet - Dana :" + "*" + "\n" +
     UnderPagi.txtSaldoDn.value +
     "\n\n" +
@@ -247,6 +255,11 @@ function underSiang() {
     "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
     UnderSiang.txtOvo.value +
     "\n\n" +
+    "*" + "Saldo Tokopedia - Gopay :" + "*" + "\n" +
+    UnderSiang.txtTokpedGopay.value +
+    "\n\n" +
+
+
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
   // Convert the text to BLOB.
@@ -261,7 +274,7 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo"];
+    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
     for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }

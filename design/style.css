@@ -13,6 +13,7 @@
   --font-Dongle: Dongle;
   --int-100: 100%;
   --warnaHitam: black;
+  --background: url('../image/index.png') no-repeat;
 }
 
 body {
@@ -20,6 +21,23 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
+
+body .container {
+  position: relative;
+}
+
+body .container::after {
+  position: absolute;
+  content: "";
+  background: var(--background) 30%;
+  background-size: 100px 60px;
+  right: 0;
+  bottom: 0px;
+  width: 100px;
+  height: calc(100% - 50vh);
+  filter: blur(1px);
+}
+
 
 .title {
   font-family: "Asap", sans-serif;
@@ -65,8 +83,10 @@ nav ul li a {
   padding: 4px 16px;
   border-radius: 3px;
   text-transform: uppercase;
-  text-decoration: none;;
-} 
+  text-decoration: none;
+  ;
+}
+
 /* input-SBiller */
 .input-SBiller {
   position: relative;
