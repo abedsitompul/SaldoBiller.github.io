@@ -182,7 +182,7 @@ function underPagi() {
   });
 
   var DateFile = new Date().getDate();
-  const NamaFile = "Saldo Biller" + pesan + "Tgl " + DateFile + ".txt"; // The file to save the data.
+  const NamaFile = "Saldo Biller " + pesan + " Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
@@ -268,7 +268,7 @@ function underSiang() {
   });
 
   var DateFile = new Date().getDate();
-  const NamaFile = "Saldo Biller" + pesan + "Tgl " + DateFile + ".txt"; // The file to save the data.
+  const NamaFile = "Saldo Biller " + pesan + " Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
 
