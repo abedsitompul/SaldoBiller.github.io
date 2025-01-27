@@ -98,6 +98,7 @@ function underPagi() {
   const UnderPagi = new Produk_PagidanMalam();
   const UnderSiang = new Produk_Siang();
   var tanggal = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
   txtSaldoP114.value = "Rp. 1.127.884";
 
   data =
@@ -169,10 +170,9 @@ function underPagi() {
     UnderSiang.txtOvo.value +
     "\n\n" +
 
-    "*" + "Saldo Ewallet - Ovo :" + "*" + "\n" +
+    "*" + "Saldo Tokopedia - Gopay :" + "*" + "\n" +
     UnderSiang.txtTokpedGopay.value +
     "\n\n" +
-
 
     "Demikian\nWassalammu'alaikum Warahmatullahi Wabarakatuh.";
 
@@ -182,7 +182,7 @@ function underPagi() {
   });
 
   var DateFile = new Date().getDate();
-  const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
+  const NamaFile = "Saldo Biller" + pesan + "Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
@@ -268,7 +268,7 @@ function underSiang() {
   });
 
   var DateFile = new Date().getDate();
-  const NamaFile = "Saldo Biller Tgl " + DateFile + ".txt"; // The file to save the data.
+  const NamaFile = "Saldo Biller" + pesan + "Tgl " + DateFile + ".txt"; // The file to save the data.
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
 
