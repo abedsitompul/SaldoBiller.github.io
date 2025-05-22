@@ -149,7 +149,8 @@ function underPagi() {
     "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
     UnderSiang.txtSaldoMitracom.value +
     "\n\n" +
-    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+
+   "*" + "Saldo PDAM Indramayu :" + "*" + "\n" +
     UnderSiang.txtSaldoPamIndramayu.value +
     "\n\n" +
 
@@ -192,7 +193,7 @@ function underPagi() {
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
-    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", ,"txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
+    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ];
 
   if (window.webkitURL != null) {
@@ -240,9 +241,11 @@ function underSiang() {
     "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
     UnderSiang.txtSaldoMitracom.value +
     "\n\n" +
-    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+
+    "*" + "Saldo PDAM Indramayu :" + "*" + "\n" +
     UnderSiang.txtSaldoPamIndramayu.value +
     "\n\n" +
+
     "*" + "Saldo GSP :" + "*" + "\n" +
     UnderSiang.txtSaldoGSP.value +
     "\n\n" +
