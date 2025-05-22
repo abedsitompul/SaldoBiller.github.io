@@ -10,7 +10,8 @@ class Produk_PagidanMalam {
 }
 
 class Produk_Siang {
-  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo, txtTokpedGopay) {
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoBigFlip, txtSaldoPluslinkMF, txtSaldoMitracom, 
+    txtSaldoPamIndramayu, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo, txtTokpedGopay) {
     this.txtSaldoBima = document.getElementById("txtSaldoBima")
     this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
     this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
@@ -18,6 +19,7 @@ class Produk_Siang {
     this.txtSaldoBigFlip = document.getElementById("txtSaldoBigFlip")
     this.txtSaldoPluslinkMF = document.getElementById("txtSaldoPluslinkMF")
     this.txtSaldoMitracom = document.getElementById("txtSaldoMitracom")
+    this.txtSaldoPamIndramayu = document.getElementById("txtSaldoPamIndramayu")
     this.txtSaldoGSP = document.getElementById("txtSaldoGSP")
     this.txtSaldoPTPOS = document.getElementById("txtSaldoPTPOS")
     this.txtArtaJasaMBA = document.getElementById("txtArtaJasaMBA")
@@ -147,6 +149,10 @@ function underPagi() {
     "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
     UnderSiang.txtSaldoMitracom.value +
     "\n\n" +
+    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+    UnderSiang.txtSaldoPamIndramayu.value +
+    "\n\n" +
+
     "*" + "Saldo GSP :" + "*" + "\n" +
     UnderSiang.txtSaldoGSP.value +
     "\n\n" +
@@ -186,7 +192,7 @@ function underPagi() {
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
-    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
+    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", ,"txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ];
 
   if (window.webkitURL != null) {
@@ -234,6 +240,9 @@ function underSiang() {
     "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
     UnderSiang.txtSaldoMitracom.value +
     "\n\n" +
+    "*" + "Saldo Mitracom - PBB :" + "*" + "\n" +
+    UnderSiang.txtSaldoPamIndramayu.value +
+    "\n\n" +
     "*" + "Saldo GSP :" + "*" + "\n" +
     UnderSiang.txtSaldoGSP.value +
     "\n\n" +
@@ -274,7 +283,7 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
+    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoBigFlip", "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
     for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
