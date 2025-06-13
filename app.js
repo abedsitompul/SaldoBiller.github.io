@@ -10,14 +10,12 @@ class Produk_PagidanMalam {
 }
 
 class Produk_Siang {
-  // txtSaldoBigFlip
-  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, , txtSaldoPluslinkMF, txtSaldoMitracom, 
+  constructor(txtSaldoBima, txtSaldoTeleanjar, txtSaldoDelima, txtSaldoDJI, txtSaldoPluslinkMF, txtSaldoMitracom, 
     txtSaldoPamIndramayu, txtSaldoGSP, txtSaldoPTPOS, txtArtaJasaMBA, txtArtaJasaVSI, txtArindo, txtLinkQU, txtOvo, txtTokpedGopay) {
     this.txtSaldoBima = document.getElementById("txtSaldoBima")
     this.txtSaldoTeleanjar = document.getElementById("txtSaldoTeleanjar")
     this.txtSaldoDelima = document.getElementById("txtSaldoDelima")
-    this.txtSaldoDJI = document.getElementById("txtSaldoDJI")
-    // this.txtSaldoBigFlip = document.getElementById("txtSaldoBigFlip")
+    this.txtSaldoDJI = document.getElementById("txtSaldoDJI") 
     this.txtSaldoPluslinkMF = document.getElementById("txtSaldoPluslinkMF")
     this.txtSaldoMitracom = document.getElementById("txtSaldoMitracom")
     this.txtSaldoPamIndramayu = document.getElementById("txtSaldoPamIndramayu")
@@ -141,9 +139,9 @@ function underPagi() {
     "*" + "Saldo DJI - FIF :" + "*" + "\n" +
     UnderSiang.txtSaldoDJI.value +
     "\n\n" +
-    // "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
-    // UnderSiang.txtSaldoBigFlip.value +
-    // "\n\n" +
+
+   
+
     "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
     UnderSiang.txtSaldoPluslinkMF.value +
     "\n\n" +
@@ -233,9 +231,7 @@ function underSiang() {
     "*" + "Saldo DJI - FIF :" + "*" + "\n" +
     UnderSiang.txtSaldoDJI.value +
     "\n\n" +
-    // "*" + "Saldo Big Flip - Transfer Uang :" + "*" + "\n" +
-    // UnderSiang.txtSaldoBigFlip.value +
-    // "\n\n" +
+
     "*" + "Saldo Pluslink - MF :" + "*" + "\n" +
     UnderSiang.txtSaldoPluslinkMF.value +
     "\n\n" +
@@ -288,7 +284,6 @@ function underSiang() {
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
     const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
-    // "txtSaldoBigFlip", 
     for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
