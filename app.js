@@ -27,6 +27,7 @@ class Produk_Siang {
     this.txtLinkQU = document.getElementById("txtLinkQU")
     this.txtOvo = document.getElementById("txtOvo")
     this.txtTokpedGopay = document.getElementById("txtTokpedGopay")
+    this.txtSaldoMidtrans = document.getElementById("txtSaldoMidtrans")
   };
 }
 
@@ -153,6 +154,11 @@ function underPagi() {
     UnderSiang.txtSaldoPamIndramayu.value +
     "\n\n" +
 
+
+   "*" + "Saldo Midtrans :" + "*" + "\n" +
+    UnderSiang.txtSaldoMidtrans.value +
+    "\n\n" +
+
     "*" + "Saldo GSP :" + "*" + "\n" +
     UnderSiang.txtSaldoGSP.value +
     "\n\n" +
@@ -192,7 +198,7 @@ function underPagi() {
   let newLink = document.createElement("a");
   newLink.download = NamaFile;
   const Array_underPagi = ["txtSaldoP114", "txtSaldoKws",
-    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
+    "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoPamIndramayu", "txtSaldoMidtrans", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ];
 
   if (window.webkitURL != null) {
@@ -243,6 +249,11 @@ function underSiang() {
     UnderSiang.txtSaldoPamIndramayu.value +
     "\n\n" +
 
+ "*" + "Saldo Midtrans :" + "*" + "\n" +
+    UnderSiang.txtSaldoMidtrans.value +
+    "\n\n" +
+
+
     "*" + "Saldo GSP :" + "*" + "\n" +
     UnderSiang.txtSaldoGSP.value +
     "\n\n" +
@@ -283,7 +294,7 @@ function underSiang() {
 
   if (window.webkitURL != null) {
     newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
+    const Array_underSiang = ["txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoPamIndramayu", "txtSaldoMidtrans",  "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"];
     for (var x = 0; x < Array_underSiang.length; x++) {
       document.getElementById(Array_underSiang[x]).value = "";
     }
