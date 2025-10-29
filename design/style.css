@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-
+ 
 :root {
   --UkFont: 22px;
   --Uk20px: 20px;
@@ -48,7 +46,7 @@ body .container::after {
 
 /* NAVBAR */
 nav {
-  background-color: #004eb4;
+  background-color: #026efc;
   height: 40px;
   width: auto;
   box-shadow: 0px -1px var(--Uk14px) 0px rgba(0, 0, 0, 1)
