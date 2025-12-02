@@ -15,7 +15,7 @@ class Produk_Siang {
   constructor() {
     [
       "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
-      "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoAJN", "txtSaldoPamIndramayu",
+      "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN", "txtSaldoPamIndramayu",
       "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI",
       "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
     ].forEach(id => this[id] = get(id));
