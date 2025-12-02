@@ -15,7 +15,7 @@ class Produk_Siang {
   constructor() {
     [
       "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
-      "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoPamIndramayu",
+      "txtSaldoPluslinkMF", "txtSaldoMitracom","txtSaldoAJN", "txtSaldoPamIndramayu",
       "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI",
       "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
     ].forEach(id => this[id] = get(id));
@@ -98,6 +98,7 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo DJI - FIF", S.txtSaldoDJI.value) +
     blok("Saldo Pluslink - MF", S.txtSaldoPluslinkMF.value) +
     blok("Saldo Mitracom - PBB", S.txtSaldoMitracom.value) +
+    blok("Saldo AJN - PDAM", S.txtSaldoAJN.value) +
     blok("Saldo PDAM Indramayu", S.txtSaldoPamIndramayu.value) +
     blok("Saldo GSP", S.txtSaldoGSP.value) +
     blok("Saldo PT POS - PDAM", S.txtSaldoPTPOS.value) +
@@ -115,7 +116,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
   clearFields([
     "txtSaldoP114", "txtSaldoKws", "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn",
     "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
-    "txtSaldoMitracom", "txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA",
+    "txtSaldoMitracom","txtSaldoAJN", "txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA",
     "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ]);
 }
@@ -137,6 +138,7 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo DJI - FIF", S.txtSaldoDJI.value) +
     blok("Saldo Pluslink - MF", S.txtSaldoPluslinkMF.value) +
     blok("Saldo Mitracom - PBB", S.txtSaldoMitracom.value) +
+    blok("Saldo AJN - PDAM", S.txtSaldoAJN.value) + 
     blok("Saldo PDAM Indramayu", S.txtSaldoPamIndramayu.value) +
     blok("Saldo GSP", S.txtSaldoGSP.value) +
     blok("Saldo PT POS - PDAM", S.txtSaldoPTPOS.value) +
@@ -153,7 +155,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
 
   clearFields([
     "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
-    "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoPamIndramayu", "txtSaldoGSP",
+    "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN","txtSaldoPamIndramayu", "txtSaldoGSP",
     "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU",
     "txtOvo", "txtTokpedGopay"
   ]);
