@@ -1,3 +1,8 @@
+toggleForm();
+
+
+
+
 // ===== Helper untuk ambil element banyak sekaligus =====
 const get = id => document.getElementById(id);
 
@@ -21,6 +26,26 @@ class Produk_Siang {
     ].forEach(id => this[id] = get(id));
   }
 }
+
+function toggleForm() {
+    const now = new Date();
+    const hour = now.getHours(); // 0 - 23 
+
+    const formContVoucher = document.getElementById("VoucherHide"); 
+
+    // Jika sudah lewat 08:00 sampai sebelum 17:00 → form hilang
+    if (hour >= 9 && hour < 18) {
+     formContVoucher.style.display = "none";
+    } 
+    else {
+formContVoucher.style.display = "block";
+    }
+} 
+
+// Jalankan saat halaman dibuka
+
+
+
 
 // ===== Display voucher otomatis =====
 const hour = new Date().getHours();
