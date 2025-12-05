@@ -25,8 +25,6 @@ class Produk_Siang {
 
 
 // Another Func
-// Jalankan saat halaman dibuka
- 
 // ===== Format Rupiah =====
 document.querySelectorAll(".form-control").forEach(e => {
   e.addEventListener("keyup", () => {
@@ -55,19 +53,33 @@ function blok(judul, val) {
   return `*${judul}:*\n${val}\n\n`;
 }
 
+
+// ===== Display voucher otomatis =====
+const today = new Date();
+const hour = today.getHours();  // 24 jam (0–23)
+
+const eleVoucher = document.querySelectorAll(".input-SBiller");
+let wbpagi = 9;
+let wbsiang = 17;
+if (hour < wbpagi) {
+  for (var wb = 0; wb < eleVoucher.length; wb++) {
+    eleVoucher[wb].style.display = "block";
+  }
+} else if (hour > wbpagi && hour < wbsiang) {
+  for (var wbp = 0; wbp < eleVoucher.length; wbp++) {
+    eleVoucher[wbp].style.display = "none";
+  }
+} else {
+  for (var wbM = 0; wbM < eleVoucher.length; wbM++) {
+    eleVoucher[wbM].style.display = "block";
+  }
+}
+
 // END Another Func
 
 
-// ===== Display voucher otomatis =====
-const hour = new Date().getHours();
-const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
-
-
-document.querySelectorAll(".input-SBiller").forEach(v => v.style.display = (pesan === "Siang" ? "none" : "block"));
-
 
 // ===== Waktu =====
-const today = new Date();
 const timeNow = `${String(today.getHours()).padStart(2,"0")}:${String(today.getMinutes()).padStart(2,"0")}`;
 const tanggal = `${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
 
