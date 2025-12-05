@@ -24,7 +24,7 @@ class Produk_Siang {
 }
 
 
-// Another Func
+// ===== Another Func =====
 // ===== Format Rupiah =====
 document.querySelectorAll(".form-control").forEach(e => {
   e.addEventListener("keyup", () => {
@@ -57,8 +57,6 @@ function blok(judul, val) {
 // ===== Display voucher otomatis =====
 const today = new Date();
 const hour = today.getHours();  // 24 jam (0–23)
-const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
-
 
 const eleVoucher = document.querySelectorAll(".input-SBiller");
 let wbpagi = 9;
@@ -75,11 +73,7 @@ if (hour < wbpagi) {
   for (var wbM = 0; wbM < eleVoucher.length; wbM++) {
     eleVoucher[wbM].style.display = "block";
   }
-}
-
-// END Another Func
-
-
+} 
 
 // ===== Waktu =====
 const timeNow = `${String(today.getHours()).padStart(2,"0")}:${String(today.getMinutes()).padStart(2,"0")}`;
@@ -95,6 +89,8 @@ function saveText(filename, text) {
   link.download = filename;
   link.click();
 }
+
+const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
 
 // ===== Pagi & Malam =====
 function underPagi() {
