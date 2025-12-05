@@ -62,9 +62,8 @@ function blok(judul, val) {
 const hour = new Date().getHours();
 const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
 
- 
-document.querySelectorAll(".input-SBiller").forEach(v => v.style.display = (pesan === "Siang" ? "none" : "block"));
 
+document.querySelectorAll(".input-SBiller").forEach(v => v.style.display = (pesan === "Siang" ? "none" : "block"));
 
 
 // ===== Waktu =====
