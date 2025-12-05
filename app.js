@@ -41,10 +41,7 @@ function toggleForm() {
 formContVoucher.style.display = "block";
     }
 } 
-
 // Jalankan saat halaman dibuka
-
-
 
 
 // ===== Display voucher otomatis =====
