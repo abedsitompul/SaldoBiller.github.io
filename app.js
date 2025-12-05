@@ -57,6 +57,8 @@ function blok(judul, val) {
 // ===== Display voucher otomatis =====
 const today = new Date();
 const hour = today.getHours();  // 24 jam (0–23)
+const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
+
 
 const eleVoucher = document.querySelectorAll(".input-SBiller");
 let wbpagi = 9;
