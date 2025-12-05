@@ -1,7 +1,3 @@
-toggleForm();
-
-
-
 
 // ===== Helper untuk ambil element banyak sekaligus =====
 const get = id => document.getElementById(id);
@@ -27,30 +23,10 @@ class Produk_Siang {
   }
 }
 
-function toggleForm() {
-    const now = new Date();
-    const hour = now.getHours(); // 0 - 23 
 
-    const formContVoucher = document.getElementById("VoucherHide"); 
-
-    // Jika sudah lewat 08:00 sampai sebelum 17:00 → form hilang
-    if (hour >= 9 && hour < 18) {
-     formContVoucher.style.display = "none";
-    } 
-    else {
-formContVoucher.style.display = "block";
-    }
-} 
+// Another Func
 // Jalankan saat halaman dibuka
-
-
-// ===== Display voucher otomatis =====
-const hour = new Date().getHours();
-const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
-
-document.querySelectorAll(".voucher")
-  .forEach(v => v.style.display = (pesan === "Siang" ? "none" : "block"));
-
+ 
 // ===== Format Rupiah =====
 document.querySelectorAll(".form-control").forEach(e => {
   e.addEventListener("keyup", () => {
@@ -68,12 +44,33 @@ function formatRupiah(num, prefix) {
   return prefix + (n[1] ? rupiah + "." + n[1] : rupiah);
 }
 
+
+// ===== Reset banyak input =====
+function clearFields(arr) {
+  arr.forEach(id => get(id).value = "");
+}
+
+// ===== Template Generator =====
+function blok(judul, val) {
+  return `*${judul}:*\n${val}\n\n`;
+}
+
+// END Another Func
+
+
+// ===== Display voucher otomatis =====
+const hour = new Date().getHours();
+const pesan = hour < 9 ? "Pagi" : hour < 17 ? "Siang" : "Malam";
+
+ 
+document.querySelectorAll(".input-SBiller").forEach(v => v.style.display = (pesan === "Siang" ? "none" : "block"));
+
+
+
 // ===== Waktu =====
 const today = new Date();
 const timeNow = `${String(today.getHours()).padStart(2,"0")}:${String(today.getMinutes()).padStart(2,"0")}`;
 const tanggal = `${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
-
-
 
 // ===== Download File =====
 function saveText(filename, text) {
@@ -84,16 +81,6 @@ function saveText(filename, text) {
   link.href = URL.createObjectURL(blob);
   link.download = filename;
   link.click();
-}
-
-// ===== Reset banyak input =====
-function clearFields(arr) {
-  arr.forEach(id => get(id).value = "");
-}
-
-// ===== Template Generator =====
-function blok(judul, val) {
-  return `*${judul}:*\n${val}\n\n`;
 }
 
 // ===== Pagi & Malam =====

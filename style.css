@@ -26,18 +26,21 @@ nav {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.input-SBiller {
+.input-SBiller,
+input-SBiller_NonHide {
     position: relative;
     margin-bottom: 6px;
 }
 
-.input-SBiller input {
+.input-SBiller input,
+input-SBiller_NonHide input {
     border-radius: 10px;
     padding: 12px;
     border: 1px solid #cfd8dc;
 }
 
-.input-SBiller label {
+.input-SBiller label,
+input-SBiller_NonHide label {
     font-size: 14px;
     margin-top: 5px;
     font-weight: bolder;
