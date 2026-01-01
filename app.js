@@ -6,8 +6,7 @@ const get = id => document.getElementById(id);
 class Produk_PagidanMalam {
   constructor() {
     [
-      "txtSaldoP114", "txtSaldoEM", "txtSaldoDn", "txtSaldoKws",
-      "txtSaldoMMI", "txtSaldoPPM"
+      "txtSaldoP114", "txtSaldoEM", "txtSaldoDn", "txtSaldoMMI", "txtSaldoPPM"
     ].forEach(id => this[id] = get(id));
   }
 }
@@ -104,8 +103,7 @@ function underPagi() {
 Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
 
 ` +
-    blok("Saldo Pulsa-114 - Voucher", P.txtSaldoP114.value) +
-    blok("Saldo Kuwais - Voucher", P.txtSaldoKws.value) +
+    blok("Saldo Pulsa-114 - Voucher", P.txtSaldoP114.value) + 
     blok("Saldo MMI - Voucher", P.txtSaldoMMI.value) +
     blok("Saldo PPM - Voucher", P.txtSaldoPPM.value) +
     blok("Saldo E-Money - Voucher", P.txtSaldoEM.value) +
@@ -132,7 +130,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
   saveText(`Saldo Biller ${pesan} Tgl ${today.getDate()}.txt`, data);
 
   clearFields([
-    "txtSaldoP114", "txtSaldoKws", "txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn",
+    "txtSaldoP114","txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn",
     "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
     "txtSaldoMitracom","txtSaldoAJN", "txtSaldoPamIndramayu", "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA",
     "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
