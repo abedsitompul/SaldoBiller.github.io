@@ -14,7 +14,7 @@ class Produk_PagidanMalam {
 class Produk_Siang {
   constructor() {
     [
-      "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
+     "txtJatelindo", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
       "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN",  "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI",
       "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
     ].forEach(id => this[id] = get(id));
@@ -107,6 +107,7 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo PPM - Voucher", P.txtSaldoPPM.value) +
     blok("Saldo E-Money - Voucher", P.txtSaldoEM.value) +
     blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) +
+    blok("Saldo JATELINDO - PLN", S.txtJatelindo.value) +
     blok("Saldo Bimasakti - PDAM", S.txtSaldoBima.value) +
     blok("Saldo Teleanjar - PDAM", S.txtSaldoTeleanjar.value) +
     blok("Saldo DELIMA - BPJS & PayTV", S.txtSaldoDelima.value) +
@@ -129,7 +130,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
 
   clearFields([
     "txtSaldoP114","txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn",
-    "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
+    "txtJatelindo","txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
     "txtSaldoMitracom","txtSaldoAJN",  "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA",
     "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ]);
@@ -146,6 +147,7 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
 
 ` +
     blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) +
+    blok("Saldo JATELINDO - PLN", S.txtJatelindo.value) +
     blok("Saldo Bimasakti - PDAM", S.txtSaldoBima.value) +
     blok("Saldo Teleanjar - PDAM", S.txtSaldoTeleanjar.value) +
     blok("Saldo DELIMA - BPJS & PayTV", S.txtSaldoDelima.value) +
@@ -167,7 +169,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
   saveText(`Saldo Biller ${pesan} Tgl ${today.getDate()}.txt`, data);
 
   clearFields([
-    "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
+    "txtSaldoDn", "txtJatelindo", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
     "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN", "txtSaldoGSP",
     "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU",
     "txtOvo", "txtTokpedGopay"
