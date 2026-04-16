@@ -96,6 +96,8 @@ function underPagi() {
   const S = new Produk_Siang();
   
   txtSaldoP114.value = "Rp. 1.127.884";
+  txtSaldoPPM.value = "Rp. 30.448.200";
+  txtArindo.value = "Rp. 58.785.913";
 
   let data =
     `Assalamu'alaikum Warahmatullahi Wabarakatuh
@@ -141,6 +143,8 @@ function underSiang() {
   const P = new Produk_PagidanMalam();
   const S = new Produk_Siang();
 
+  txtArindo.value = "Rp. 58.785.913";
+  
   let data =
     `Assalamu'alaikum Warahmatullahi Wabarakatuh
 Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
