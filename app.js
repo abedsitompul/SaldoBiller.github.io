@@ -105,8 +105,8 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
 
 ` +
     blok("Saldo Pulsa-114 - Voucher", P.txtSaldoP114.value) + 
-    blok("Saldo MMI - Voucher", P.txtSaldoMMI.value) +
     blok("Saldo PPM - Voucher", P.txtSaldoPPM.value) +
+    blok("Saldo MMI - Voucher", P.txtSaldoMMI.value) +
     blok("Saldo E-Money - Voucher", P.txtSaldoEM.value) +
     blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) +
     blok("Saldo JATELINDO - PLN", S.txtJatelindo.value) +
@@ -121,10 +121,10 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo PT POS - PDAM", S.txtSaldoPTPOS.value) +
     blok("Saldo Artajasa - MBA", S.txtArtaJasaMBA.value) +
     blok("Saldo Artajasa - VSI", S.txtArtaJasaVSI.value) +
-    blok("Saldo Arindo - PDAM", S.txtArindo.value) +
     blok("Saldo LinkQU - Transfer Uang", S.txtLinkQU.value) +
     blok("Saldo Ewallet - Ovo", S.txtOvo.value) +
     blok("Saldo Tokopedia - Gopay", S.txtTokpedGopay.value) +
+    blok("Saldo Arindo - PDAM", S.txtArindo.value) +
     `Demikian
 Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
 
@@ -163,10 +163,10 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo PT POS - PDAM", S.txtSaldoPTPOS.value) +
     blok("Saldo Artajasa - MBA", S.txtArtaJasaMBA.value) +
     blok("Saldo Artajasa - VSI", S.txtArtaJasaVSI.value) +
-    blok("Saldo Arindo - PDAM", S.txtArindo.value) +
     blok("Saldo LinkQU - Transfer Uang", S.txtLinkQU.value) +
     blok("Saldo Ewallet - Ovo", S.txtOvo.value) +
     blok("Saldo Tokopedia - Gopay", S.txtTokpedGopay.value) +
+    blok("Saldo Arindo - PDAM", S.txtArindo.value) +
     `Demikian
 Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
 
