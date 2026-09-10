@@ -98,6 +98,7 @@ function underPagi() {
   txtSaldoP114.value = "Rp. 1.127.884";
   txtSaldoPPM.value = "Rp. 30.448.200";
   txtArindo.value = "Rp. 58.785.913";
+  txtSaldoEM.value = "Rp. 14.361.843";
 
   let data =
     `Assalamu'alaikum Warahmatullahi Wabarakatuh
