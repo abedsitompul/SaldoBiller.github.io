@@ -1,178 +1,168 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saldo Biller</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi lokal untuk membuat laporan saldo biller. Data diproses di browser dan tidak dikirim ke server.">
+  <title>Saldo Biller</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap hanya untuk tampilan. Tidak ada jQuery atau script eksternal. -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet">
 
-
-  <link href="style.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-
   <nav>
     <span>Saldo Biller</span>
   </nav>
 
-  <div class="container mt-4">
-
+  <main class="container mt-4">
     <div class="row justify-content-center">
 
-      <!-- PANEL 1 -->
+      <!-- PANEL VOUCHER -->
       <div class="col-md-5 col-sm-12">
         <div class="card-panel">
           <p class="title">Voucher</p>
 
           <div class="input-SBiller">
-            <label>114</label>
-            <input type="text" class="form-control VoucherHide" id="txtSaldoP114" disabled />
-          </div>
-
-          <!-- <div class="input-SBiller">
-            <label>Kuwais</label>
-            <input type="text" class="form-control VoucherHide" id="txtSaldoKws" required />
-          </div> -->
-
-          <div class="input-SBiller">
-            <label>PPM</label>
-            <input type="text" class="form-control VoucherHide" id="txtSaldoPPM" disabled />
-          </div>
-
-           <div class="input-SBiller">
-            <label>E-Money</label>
-            <input type="text" class="form-control VoucherHide" id="txtSaldoEM" disabled />
+            <label for="txtSaldoP114">114</label>
+            <input type="text" class="form-control VoucherHide" id="txtSaldoP114" disabled>
           </div>
 
           <div class="input-SBiller">
-            <label>MMI</label>
-            <input type="text" class="form-control VoucherHide" id="txtSaldoMMI" required />
+            <label for="txtSaldoPPM">PPM</label>
+            <input type="text" class="form-control VoucherHide" id="txtSaldoPPM" disabled>
+          </div>
+
+          <div class="input-SBiller">
+            <label for="txtSaldoEM">E-Money</label>
+            <input type="text" class="form-control VoucherHide" id="txtSaldoEM" disabled>
+          </div>
+
+          <div class="input-SBiller">
+            <label for="txtSaldoMMI">MMI</label>
+            <input type="text" class="form-control VoucherHide" id="txtSaldoMMI">
           </div>
 
           <div class="input-SBiller_NonHide">
-            <label>E-Wallet Dana</label>
-            <input type="text" class="form-control" id="txtSaldoDn" required />
+            <label for="txtSaldoDn">E-Wallet Dana</label>
+            <input type="text" class="form-control" id="txtSaldoDn">
           </div>
         </div>
       </div>
 
-      <!-- PANEL 2 -->
+      <!-- PANEL EX VOUCHER -->
       <div class="col-md-7 col-sm-12">
         <div class="card-panel">
           <p class="title">Ex Voucher</p>
 
           <div class="row">
-
             <div class="col-md-6">
 
-               <div class="input-SBiller_NonHide">
-                <label>JATELINDO - PLN</label>
-                <input type="text" class="form-control" id="txtJatelindo" required />
+              <div class="input-SBiller_NonHide">
+                <label for="txtJatelindo">JATELINDO - PLN</label>
+                <input type="text" class="form-control" id="txtJatelindo">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Bimasakti</label>
-                <input type="text" class="form-control" id="txtSaldoBima" required />
+                <label for="txtSaldoBima">Bimasakti</label>
+                <input type="text" class="form-control" id="txtSaldoBima">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Teleanjar</label>
-                <input type="text" class="form-control" id="txtSaldoTeleanjar" required />
+                <label for="txtSaldoTeleanjar">Teleanjar</label>
+                <input type="text" class="form-control" id="txtSaldoTeleanjar">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Delima - Finnet</label>
-                <input type="text" class="form-control" id="txtSaldoDelima" required />
+                <label for="txtSaldoDelima">Delima - Finnet</label>
+                <input type="text" class="form-control" id="txtSaldoDelima">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>DJI - FIF</label>
-                <input type="text" class="form-control" id="txtSaldoDJI" required />
+                <label for="txtSaldoDJI">DJI - FIF</label>
+                <input type="text" class="form-control" id="txtSaldoDJI">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Pluslink - MF</label>
-                <input type="text" class="form-control" id="txtSaldoPluslinkMF" required />
+                <label for="txtSaldoPluslinkMF">Pluslink - MF</label>
+                <input type="text" class="form-control" id="txtSaldoPluslinkMF">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Mitracom</label>
-                <input type="text" class="form-control" id="txtSaldoMitracom" required />
+                <label for="txtSaldoMitracom">Mitracom</label>
+                <input type="text" class="form-control" id="txtSaldoMitracom">
               </div>
-  
 
               <div class="input-SBiller_NonHide">
-                <label>PDAM AJN</label>
-                <input type="text" class="form-control" id="txtSaldoAJN" required />
+                <label for="txtSaldoAJN">PDAM AJN</label>
+                <input type="text" class="form-control" id="txtSaldoAJN">
               </div>
 
             </div>
 
             <div class="col-md-6">
+
               <div class="input-SBiller_NonHide">
-                <label>GSP</label>
-                <input type="text" class="form-control" id="txtSaldoGSP" required />
+                <label for="txtSaldoGSP">GSP</label>
+                <input type="text" class="form-control" id="txtSaldoGSP">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>PT POS</label>
-                <input type="text" class="form-control" id="txtSaldoPTPOS" required />
+                <label for="txtSaldoPTPOS">PT POS</label>
+                <input type="text" class="form-control" id="txtSaldoPTPOS">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>ArtaJasa - MBA</label>
-                <input type="text" class="form-control" id="txtArtaJasaMBA" required />
+                <label for="txtArtaJasaMBA">ArtaJasa - MBA</label>
+                <input type="text" class="form-control" id="txtArtaJasaMBA">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>ArtaJasa - VSI</label>
-                <input type="text" class="form-control" id="txtArtaJasaVSI" required />
-              </div>
-
-            
-              <div class="input-SBiller_NonHide">
-                <label>LinkQU - Transfer Uang</label>
-                <input type="text" class="form-control" id="txtLinkQU" required />
+                <label for="txtArtaJasaVSI">ArtaJasa - VSI</label>
+                <input type="text" class="form-control" id="txtArtaJasaVSI">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>E-Wallet Ovo</label>
-                <input type="text" class="form-control" id="txtOvo" required />
+                <label for="txtLinkQU">LinkQU - Transfer Uang</label>
+                <input type="text" class="form-control" id="txtLinkQU">
               </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Tokopedia - Gopay</label>
-                <input type="text" class="form-control" id="txtTokpedGopay" required />
+                <label for="txtOvo">E-Wallet Ovo</label>
+                <input type="text" class="form-control" id="txtOvo">
               </div>
 
+              <div class="input-SBiller_NonHide">
+                <label for="txtTokpedGopay">Tokopedia - Gopay</label>
+                <input type="text" class="form-control" id="txtTokpedGopay">
+              </div>
 
               <div class="input-SBiller_NonHide">
-                <label>Arindo - PDAM</label>
-                <input type="text" class="form-control" id="txtArindo" disabled />
+                <label for="txtArindo">Arindo - PDAM</label>
+                <input type="text" class="form-control" id="txtArindo" disabled>
               </div>
 
             </div>
-
           </div>
-
         </div>
       </div>
 
-      <!-- SUBMIT BUTTON -->
+      <!-- SUBMIT -->
       <div class="col-12 text-center btnsubmit">
-        <button type="submit" class="btn" onclick="saveFile()">Submit</button>
+        <button type="button" class="btn" id="btnSave">Buat File Laporan</button>
       </div>
 
     </div>
-  </div>
+  </main>
 
- <footer>
+  <footer>
     Copyright : HD
   </footer>
-  <script src="app.js"></script>
 
+  <script src="app.js"></script>
 </body>
 </html>
