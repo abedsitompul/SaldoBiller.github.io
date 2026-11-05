@@ -14,7 +14,7 @@ class Produk_PagidanMalam {
 class Produk_Siang {
   constructor() {
     [
-     "txtJatelindo", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
+    "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
       "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN",  "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI",
       "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
     ].forEach(id => this[id] = get(id));
@@ -99,6 +99,7 @@ function underPagi() {
   txtSaldoPPM.value = "Rp. 30.448.200";
   txtArindo.value = "Rp. 58.785.913";
   txtSaldoEM.value = "Rp. 14.361.843";
+  txtLinkQU.value = "Rp. 6.391.065";
 
   let data =
     `Assalamu'alaikum Warahmatullahi Wabarakatuh
@@ -109,8 +110,7 @@ Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
     blok("Saldo PPM - Voucher", P.txtSaldoPPM.value) +
     blok("Saldo MMI - Voucher", P.txtSaldoMMI.value) +
     blok("Saldo E-Money - Voucher", P.txtSaldoEM.value) +
-    blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) +
-    blok("Saldo JATELINDO - PLN", S.txtJatelindo.value) +
+    blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) + 
     blok("Saldo Bimasakti - PDAM", S.txtSaldoBima.value) +
     blok("Saldo Teleanjar - PDAM", S.txtSaldoTeleanjar.value) +
     blok("Saldo DELIMA - BPJS & PayTV", S.txtSaldoDelima.value) +
@@ -132,8 +132,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
   saveText(`Saldo Biller ${pesan} Tgl ${today.getDate()}.txt`, data);
 
   clearFields([
-    "txtSaldoP114","txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn",
-    "txtJatelindo","txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
+    "txtSaldoP114","txtSaldoMMI", "txtSaldoPPM", "txtSaldoEM", "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI", "txtSaldoPluslinkMF",
     "txtSaldoMitracom","txtSaldoAJN",  "txtSaldoGSP", "txtSaldoPTPOS", "txtArtaJasaMBA",
     "txtArtaJasaVSI", "txtArindo", "txtLinkQU", "txtOvo", "txtTokpedGopay"
   ]);
@@ -145,14 +144,14 @@ function underSiang() {
   const S = new Produk_Siang();
 
   txtArindo.value = "Rp. 58.785.913";
-  
+    txtLinkQU.value = "Rp. 6.391.065";
+    
   let data =
     `Assalamu'alaikum Warahmatullahi Wabarakatuh
 Update Info Saldo ${pesan}, Tanggal ${tanggal} Pukul ${timeNow}
 
 ` +
-    blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) +
-    blok("Saldo JATELINDO - PLN", S.txtJatelindo.value) +
+    blok("Saldo Ewallet - Dana", P.txtSaldoDn.value) + 
     blok("Saldo Bimasakti - PDAM", S.txtSaldoBima.value) +
     blok("Saldo Teleanjar - PDAM", S.txtSaldoTeleanjar.value) +
     blok("Saldo DELIMA - BPJS & PayTV", S.txtSaldoDelima.value) +
@@ -174,7 +173,7 @@ Wassalammu'alaikum Warahmatullahi Wabarakatuh.`;
   saveText(`Saldo Biller ${pesan} Tgl ${today.getDate()}.txt`, data);
 
   clearFields([
-    "txtSaldoDn", "txtJatelindo", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
+    "txtSaldoDn", "txtSaldoBima", "txtSaldoTeleanjar", "txtSaldoDelima", "txtSaldoDJI",
     "txtSaldoPluslinkMF", "txtSaldoMitracom", "txtSaldoAJN", "txtSaldoGSP",
     "txtSaldoPTPOS", "txtArtaJasaMBA", "txtArtaJasaVSI", "txtArindo", "txtLinkQU",
     "txtOvo", "txtTokpedGopay"
